@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afa23dbdd21f7824a9f34c04bb3d328e, type: 3}
-  m_Name: LoneBerg2
+  m_Name: Cluster_midLine
   m_EditorClassIdentifier: 
   positions:
   - lane: 2
-    offset: 0.585
-  width: 15
+    offset: 0.166
+  - lane: 1
+    offset: 0.333
+  - lane: 1
+    offset: 0.666
+  - lane: 1
+    offset: 0.833
+  width: 40
