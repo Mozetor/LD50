@@ -37,11 +37,6 @@ namespace LD50 {
 
             var distanceToEase = 1 - Mathf.Abs(distance);
 
-            // distance = -1 -> 0.5f
-            // distance = -0.5 -> 0
-            // distance = 0 -> 0.5f
-            // distance = 0.5 -> 1
-            // distance = -1 -> 0.5f
             var distanceToAngleTime = 0.5f * Mathf.Sin(distance * Mathf.PI) + 0.5f;
 
 
@@ -54,7 +49,7 @@ namespace LD50 {
             _rigidbody.MovePosition(
                 Vector3.Lerp(
                     this.transform.position,
-                    Vector3.right * _gameManager.GetLaneXPosition(_lane),
+                    new Vector3(_gameManager.GetLaneXPosition(_lane),transform.position.y, transform.position.z),
                     Time.fixedDeltaTime * maneuverability * distanceToEase
                 )
            );

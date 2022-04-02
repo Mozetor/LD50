@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afa23dbdd21f7824a9f34c04bb3d328e, type: 3}
-  m_Name: LoneBerg2
+  m_Name: Cluster_smalUp
   m_EditorClassIdentifier: 
   positions:
-  - lane: 2
-    offset: 0.585
-  width: 15
+  - lane: 1
+    offset: 0.5
+  - lane: 0
+    offset: 0.75
+  width: 20

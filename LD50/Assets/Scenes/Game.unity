@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.39900655, g: 0.41774514, b: 0.41552442, a: 1}
+  m_IndirectSpecularColor: {r: 0.3990942, g: 0.4178745, b: 0.4157298, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11513487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -869,10 +869,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presets:
-  - {fileID: 11400000, guid: a8a3f829d1eb4fd4299452f706bc51a2, type: 2}
-  - {fileID: 11400000, guid: 52917ecfb9c14254886889aeca064f42, type: 2}
-  - {fileID: 11400000, guid: ca59eb5abe41b9d4faec52709040c5b2, type: 2}
-  - {fileID: 11400000, guid: 9a412151f306f624d971d5a87f5d05c0, type: 2}
+  - {fileID: 11400000, guid: b3235ac4c19b145439bd108b452aea17, type: 2}
+  - {fileID: 11400000, guid: b5d1ee12700cd2943ba9c05bedb3cb4d, type: 2}
+  - {fileID: 11400000, guid: 0874fc8a65324f049be9731a9406bdc5, type: 2}
+  - {fileID: 11400000, guid: c0c544edcd201e64fa86c26969d68360, type: 2}
+  - {fileID: 11400000, guid: c458aca31a558b64eaa76cc184ac5d41, type: 2}
+  - {fileID: 11400000, guid: 21ea48547b8683845ab772be56fec04e, type: 2}
   icebergs:
   - {fileID: 1596922187761312121, guid: 01c283a0ed67df44facb801fa2a2d0bc, type: 3}
   - {fileID: 2667698255582195237, guid: 74bdf6f7b03f1144ea4b053e6f581a0e, type: 3}
