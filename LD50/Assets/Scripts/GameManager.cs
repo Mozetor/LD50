@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace LD50
@@ -21,6 +22,12 @@ namespace LD50
         {
             if(isAlive)
                 roundStats.timeSurvived += Time.deltaTime;
+        }
+
+        internal void IcebergDodged() {
+            if (isAlive) {
+                roundStats.icebergsDodged++;
+            }
         }
 
         public int GetLaneXPosition(int lane) => 
