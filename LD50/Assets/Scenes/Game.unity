@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 11513490}
   - component: {fileID: 11513489}
   - component: {fileID: 11513488}
+  - component: {fileID: 11513493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -217,6 +218,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11513493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11513487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efcd63d27543dd4b98b56ff5ab9681f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &262592834
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +886,9 @@ MonoBehaviour:
   - {fileID: 6532664137779528550, guid: 8bd7fe3f2b42baa43862937f6be8e4b3, type: 3}
   spawnZ: 25
   speed: 2.6
+  fullSteamAheadPrefab: {fileID: 1773550258596818567, guid: 9437dc75b9b313945a0cc053d738a553, type: 3}
+  armourPlatingPrefab: {fileID: 7278854229233380803, guid: d13e6d7f9ab1e0c4397eeef01347d865, type: 3}
+  maneuverabiltyUpPrefab: {fileID: 8176280684379469355, guid: fef11923f45bbca4ea686b27574001aa, type: 3}
 --- !u!4 &1155655318
 Transform:
   m_ObjectHideFlags: 0
