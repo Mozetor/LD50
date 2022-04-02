@@ -8,8 +8,9 @@ namespace LD50
         private void OnCollisionEnter(Collision collision)
         {
             if(!collision.transform.CompareTag("Iceberg")) return;
-            
-            FindObjectOfType<GameManager>().AddRoundToGlobalStats();
+            var g = FindObjectOfType<GameManager>();
+            g.isAlive = false;
+            g.AddRoundToGlobalStats();
             FindObjectOfType<SceneController>().ChangeScene("GameOver");
         }
     }

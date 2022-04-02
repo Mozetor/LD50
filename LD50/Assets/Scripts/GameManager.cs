@@ -10,6 +10,8 @@ namespace LD50
         public GameStats globalStats;
         public GameStats roundStats;
 
+        public bool isAlive = true;
+
         private void Awake()
         {
             roundStats.Reset();
@@ -17,7 +19,8 @@ namespace LD50
 
         private void Update()
         {
-            roundStats.timeSurvived += Time.deltaTime;
+            if(isAlive)
+                roundStats.timeSurvived += Time.deltaTime;
         }
 
         public int GetLaneXPosition(int lane) => 
