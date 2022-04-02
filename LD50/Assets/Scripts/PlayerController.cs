@@ -17,8 +17,6 @@ namespace LD50 {
         private void Update() {
             var laneDiff = 0;
 
-            Debug.LogFormat("Position {0}, Target position {1}", transform.position.x, _gameManager.GetLaneXPosition(_lane));
-
             if (Mathf.Abs(transform.position.x - _gameManager.GetLaneXPosition(_lane)) < laneSwapThreshold &&
                 (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             ) {
