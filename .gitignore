@@ -25,3 +25,5 @@ sysinfo.txt
 
 **/*.blend[1-9][0-9]
 **/*.blend[1-9][0-9].meta
+
+LD50/UserSettings/Layouts/
