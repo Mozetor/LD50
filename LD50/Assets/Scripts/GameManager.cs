@@ -32,6 +32,7 @@ namespace LD50
             globalStats.icebergsDodged += roundStats.icebergsDodged;
             globalStats.powerUpsCollected += roundStats.powerUpsCollected;
             globalStats.roundsPlayed += 1;
+            globalStats.timeSurvivedHighScore = Mathf.Max(globalStats.timeSurvivedHighScore, roundStats.timeSurvived);
         }
     }
 }
