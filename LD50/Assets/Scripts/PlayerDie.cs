@@ -9,7 +9,7 @@ namespace LD50
         {
             if(!collision.transform.CompareTag("Iceberg")) return;
             
-            Debug.Log("Game over!");
+            FindObjectOfType<GameManager>().AddRoundToGlobalStats();
             FindObjectOfType<SceneController>().ChangeScene("GameOver");
         }
     }
