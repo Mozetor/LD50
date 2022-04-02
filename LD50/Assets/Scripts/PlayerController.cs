@@ -4,36 +4,39 @@ namespace LD50
 {
     public class PlayerController : MonoBehaviour
     {
-        private int _laneCount;
-        private int _xDistanceBetweenLane;
         public Transform playerTransform;
+        public float maneuverability;
+        private int _lane;
+        private GameManager _gameManager;
+        private Rigidbody _rigidbody;
 
         private void Awake()
         {
-            var gameManager = FindObjectOfType<GameManager>();
-            _laneCount = gameManager.laneCount;
-            _xDistanceBetweenLane = gameManager.xDistanceBetweenLane;
+            _gameManager = FindObjectOfType<GameManager>();
+            _rigidbody = FindObjectOfType<Rigidbody>();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                TryMove(1);
+            var laneDiff = 0;
+
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+                laneDiff--;
             }
-            else if (Input.GetKeyDown(KeyCode.S))
-            {
-                TryMove(-1);
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+                laneDiff++;
             }
+
+            _lane = Mathf.Clamp(_lane + laneDiff, 0, _gameManager.laneCount - 1);
         }
 
-        private void TryMove(int direction)
-        {
-            var maxX = _laneCount / 2 * _xDistanceBetweenLane;
-            var pos = playerTransform.position;
-            pos.x += _xDistanceBetweenLane * direction;
-            pos.x = Mathf.Max(Mathf.Min(pos.x, maxX), -maxX);
-            playerTransform.position = pos;
+        private void FixedUpdate() {
+            
+            _rigidbody.MovePosition(Vector3.Lerp(
+                this.transform.position, 
+                Vector3.right * _gameManager.GetLaneXPosition(_lane), 
+                Time.fixedDeltaTime * maneuverability)
+           );
         }
     }
 }
