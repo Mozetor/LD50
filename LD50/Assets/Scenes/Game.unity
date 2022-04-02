@@ -322,6 +322,68 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &1155655316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1155655318}
+  - component: {fileID: 1155655317}
+  m_Layer: 0
+  m_Name: IcebergSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1155655317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155655316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea15e355fb2fbe498e5606711f080ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presets:
+  - {fileID: 11400000, guid: a8a3f829d1eb4fd4299452f706bc51a2, type: 2}
+  - {fileID: 11400000, guid: 52917ecfb9c14254886889aeca064f42, type: 2}
+  - {fileID: 11400000, guid: ca59eb5abe41b9d4faec52709040c5b2, type: 2}
+  - {fileID: 11400000, guid: 9a412151f306f624d971d5a87f5d05c0, type: 2}
+  icebergs:
+  - {fileID: 1615190119512513107, guid: c4b7f949b42f20c44847c9cd4e1b5ccf, type: 3}
+  - {fileID: 5856169587768318196, guid: 279c53cb04fbe5f41964aef91954dbf3, type: 3}
+  - {fileID: 4227526823472657032, guid: beb637ed08c4ad44083b7676495e7348, type: 3}
+  - {fileID: 6459532228264276510, guid: f21df04820e2a184ab63c50d18c03d93, type: 3}
+  - {fileID: 7258078753960133998, guid: 5b4cc5f40cef2a24c8eae8df10dcd201, type: 3}
+  - {fileID: 8024727389087237010, guid: dd85612179c74644aa0f569016287bb2, type: 3}
+  - {fileID: 8310848862635941523, guid: 097c879f7b2c2c84cb1c0e3561a3209a, type: 3}
+  - {fileID: 7370747137149118669, guid: 2e09ed2415019a94b96c32e99e203d1a, type: 3}
+  - {fileID: 6129688983099581131, guid: 5870e6313123e3e4db9b15252dd06521, type: 3}
+  - {fileID: 7512700255445003640, guid: d5e7a8970ba492847bd0e0551633ea8d, type: 3}
+  spawnZ: 10
+  speed: 2.6
+--- !u!4 &1155655318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155655316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1425150694
 PrefabInstance:
   m_ObjectHideFlags: 0
