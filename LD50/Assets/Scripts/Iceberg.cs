@@ -9,7 +9,9 @@ namespace LD50 {
         private void Update() {
             this.transform.position = this.transform.position - speed * Vector3.forward * Time.deltaTime;
 
-            if (this.transform.position.z < despawnZ) {
+            if (this.transform.position.z < despawnZ)
+            {
+                FindObjectOfType<GameManager>().roundStats.icebergsDodged++;
                 Destroy(this.gameObject);
             }
         }
