@@ -1,3 +1,4 @@
+using LD50.Utils;
 using UnityEngine;
 
 namespace LD50
@@ -9,6 +10,7 @@ namespace LD50
             if(!collision.transform.CompareTag("Iceberg")) return;
             
             Debug.Log("Game over!");
+            FindObjectOfType<SceneController>().ChangeScene("GameOver");
         }
     }
 }
