@@ -6,12 +6,13 @@ namespace LD50 {
         public float speed;
         public float despawnZ;
 
+
         private void Update() {
             this.transform.position = this.transform.position - speed * Vector3.forward * Time.deltaTime;
 
             if (this.transform.position.z < despawnZ)
             {
-                FindObjectOfType<GameManager>().roundStats.icebergsDodged++;
+                FindObjectOfType<GameManager>().IcebergDodged();
                 Destroy(this.gameObject);
             }
         }
