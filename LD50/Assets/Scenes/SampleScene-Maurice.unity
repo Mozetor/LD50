@@ -218,7 +218,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1961022187}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -412,14 +412,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.15304591, w: 0.6903456}
+  m_LocalPosition: {x: -12.46, y: 5.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: 90, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2147183479}
   - component: {fileID: 2147183478}
+  - component: {fileID: 2147183480}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -514,8 +515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a381bad7dbce3443be316e41d98ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laneCount: 3
-  xDistanceBetweenLane: 5
   playerTransform: {fileID: 1961022187}
 --- !u!4 &2147183479
 Transform:
@@ -532,3 +531,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2147183480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147183477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed36184f92a2746a781c683dc4559d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneCount: 3
+  xDistanceBetweenLane: 5

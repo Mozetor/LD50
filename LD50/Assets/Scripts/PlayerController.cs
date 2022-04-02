@@ -1,16 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace LD50
 {
     public class PlayerController : MonoBehaviour
     {
-        public int laneCount = 3;
-        public int xDistanceBetweenLane = 5;
+        private int _laneCount;
+        private int _xDistanceBetweenLane;
         public Transform playerTransform;
-        
+
+        private void Awake()
+        {
+            var gameManager = FindObjectOfType<GameManager>();
+            _laneCount = gameManager.laneCount;
+            _xDistanceBetweenLane = gameManager.xDistanceBetweenLane;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.W))
@@ -25,13 +29,11 @@ namespace LD50
 
         private void TryMove(int direction)
         {
-            var max = laneCount / 2 * xDistanceBetweenLane;
+            var maxX = _laneCount / 2 * _xDistanceBetweenLane;
             var pos = playerTransform.position;
-            pos.x += xDistanceBetweenLane * direction;
-            // Mathf.
-            //
-            // playerTransform.position = pos;
-            
+            pos.x += _xDistanceBetweenLane * direction;
+            pos.x = Mathf.Max(Mathf.Min(pos.x, maxX), -maxX);
+            playerTransform.position = pos;
         }
     }
 }
