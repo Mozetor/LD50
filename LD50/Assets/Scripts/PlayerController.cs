@@ -4,7 +4,6 @@ namespace LD50
 {
     public class PlayerController : MonoBehaviour
     {
-        public Transform playerTransform;
         public float maneuverability;
         private int _lane;
         private GameManager _gameManager;
@@ -14,6 +13,7 @@ namespace LD50
         {
             _gameManager = FindObjectOfType<GameManager>();
             _rigidbody = FindObjectOfType<Rigidbody>();
+            _lane = _gameManager.laneCount / 2;
         }
 
         private void Update()
