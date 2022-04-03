@@ -21,5 +21,10 @@ namespace LD50.Icebergs {
                 Destroy(this.gameObject);
             }
         }
+
+        public void Destroy() {
+            // vfx
+            Destroy(this.gameObject);
+        }
     }
 }

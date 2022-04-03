@@ -7,7 +7,7 @@ namespace LD50.Player
     {
         private void OnCollisionEnter(Collision collision)
         {
-            if(!collision.transform.CompareTag("Iceberg")) return;
+            if(!this.enabled || !collision.transform.CompareTag("Iceberg")) return;
             var g = FindObjectOfType<GameManager>();
             g.isAlive = false;
             g.AddRoundToGlobalStats();
