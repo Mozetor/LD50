@@ -1,7 +1,7 @@
 using LD50.Utils;
 using UnityEngine;
 
-namespace LD50
+namespace LD50.Player
 {
     public class PlayerDie : MonoBehaviour
     {

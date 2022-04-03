@@ -1,23 +1,23 @@
 using UnityEngine;
 
-namespace LD50
+namespace LD50.Icebergs
 {
     public class DecoIceberg : MonoBehaviour
     {
-        private Vector3 _teleportOffset;
-        private float _speed;
         public float teleportZ;
         
+        private Vector3 _teleportOffset;
+        private GameManager _gameManager;
 
         private void Awake()
         {
-            _speed = FindObjectOfType<IcebergSpawner>().speed;
+            _gameManager = FindObjectOfType<GameManager>();
             _teleportOffset = Vector3.forward * 2 * teleportZ;
         }
 
         private void Update()
         {
-            transform.position -= _speed * Time.deltaTime * Vector3.forward;
+            transform.position -= _gameManager.speed * Time.deltaTime * Vector3.forward;
             if (transform.position.z < -teleportZ)
                 transform.position += _teleportOffset;
         }

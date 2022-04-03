@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Sound {
+namespace LD50.Sound {
 
     public class AudioClipPlayer : MonoBehaviour {
         public AudioMixerGroup mixerGroup;

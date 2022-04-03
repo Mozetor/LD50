@@ -1,8 +1,8 @@
-﻿using Settings;
+﻿using LD50.Settings;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Sound {
+namespace LD50.Sound {
 
     public class BackgroundSound : MonoBehaviour {
 

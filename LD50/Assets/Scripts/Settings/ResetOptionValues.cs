@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings
+namespace LD50.Settings
 {
     /// <summary>
     /// Accesses the OptionsController instance to reset setting values.
