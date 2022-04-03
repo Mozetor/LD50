@@ -22,6 +22,9 @@ namespace LD50.PowerUp {
             public void TriggerPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
                 obj.StartCoroutine(ExecutePowerUp(obj).GetEnumerator());
+                var controller = GameObject.Find("FullSteamAhead").GetComponent<Animator>();
+                controller.transform.GetChild(0).gameObject.SetActive(true);
+                controller.SetTrigger("Trigger");
             }
 
             public void CleanUpPowerUp() { 
@@ -46,6 +49,8 @@ namespace LD50.PowerUp {
                     playerDie.enabled = true;
                     playerDestroy.enabled = false;
                     manager.SetSpeed(manager.speed / SPEED_FACTOR);
+                    var controller = GameObject.Find("FullSteamAhead").GetComponent<Animator>();
+                    controller.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
         }
@@ -86,12 +91,17 @@ namespace LD50.PowerUp {
                 playerDie.lives++;
                 var plating = GameObject.Find("Plating").GetComponent<MeshRenderer>();
                 plating.enabled = true;
+                var obj = GameObject.FindObjectOfType<PowerUpManager>();
+                GameObject.Find("Armour").transform.GetChild(0).gameObject.SetActive(true);
+                var amount = GameObject.Find("Amount").GetComponent<TMPro.TextMeshProUGUI>();
+                amount.text = $"{obj.activePowerUps[this] + 1}";
             }
             public void CleanUpPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
                 if (obj.activePowerUps[this] == 1) {
                     var plating = GameObject.Find("Plating").GetComponent<MeshRenderer>();
                     plating.enabled = false;
+                    GameObject.Find("ArmourPlating").SetActive(false);
                 }
             }
 
