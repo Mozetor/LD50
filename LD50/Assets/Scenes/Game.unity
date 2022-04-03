@@ -1589,6 +1589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aed36184f92a2746a781c683dc4559d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyData: {fileID: 11400000, guid: 9455041f95e31c248aa1bfdddecc2965, type: 2}
+  difficultyIncrease: 0
   speed: 3
   laneCount: 3
   xDistanceBetweenLane: 5
