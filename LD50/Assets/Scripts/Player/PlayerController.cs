@@ -33,9 +33,10 @@ namespace LD50.Player {
 
         private void FixedUpdate() {
             var distance = (_gameManager.GetLaneXPosition(_lane) - transform.position.x) /
-                (_gameManager.xDistanceBetweenLane + laneSwapThreshold);
+                (_gameManager.xDistanceBetweenLane + 0.1f);
 
-            var distanceToEase = 1 - Mathf.Abs(distance);
+
+            var distanceToEase = 0.9f * (1 - Mathf.Abs(distance)) + 0.1f;
 
             var distanceToAngleTime = 0.5f * Mathf.Sin(distance * Mathf.PI) + 0.5f;
 

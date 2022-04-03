@@ -1,0 +1,13 @@
+
+For LD50
+
+Ingame use - name - license - artist (link) - Download (link)
+
+
+This game uses these sounds from freesound:
+
+pickup effect - success-1-6297 - license: CC0 1.0 - artist: https://freesound.org/people/Leszek_Szary/ - Download link: https://freesound.org/people/Leszek_Szary/sounds/171671/
+fail effect - cannon-shot-6153 - license: CC0 1.0 - artist: https://freesound.org/people/qubodup/ - Download link: https://freesound.org/people/qubodup/sounds/187767/
+click Ui effect - clickclack-6312 - license: CC0 1.0 - artist: https://freesound.org/people/raficacosta/ - Download link: https://freesound.org/people/raficacosta/sounds/576113/
+
+background music - 雪のテーマ-Snow-field - license: CC0 1.0 - artist: https://www.chosic.com/free-music/all/?keyword=%E9%99%BD%E8%8F%9C/Hina&artist - Download link: https://www.chosic.com/download-audio/28361/

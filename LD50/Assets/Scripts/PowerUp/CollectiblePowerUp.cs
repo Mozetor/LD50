@@ -1,16 +1,15 @@
 using LD50.Icebergs;
 using UnityEngine;
 
-namespace LD50 {
-    public class PowerUp : MonoBehaviour {
+namespace LD50.PowerUp {
+    public class CollectiblePowerUp : MonoBehaviour {
 
         public float despawnZ;
         [HideInInspector]
         public IcebergPreset.ElementType type;
         private GameManager _gameManager;
-        
-        private void Start()
-        {
+
+        private void Start() {
             _gameManager = FindObjectOfType<GameManager>();
         }
 

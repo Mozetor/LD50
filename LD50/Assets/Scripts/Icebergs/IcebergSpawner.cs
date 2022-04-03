@@ -1,3 +1,4 @@
+using LD50.PowerUp;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,9 +10,9 @@ namespace LD50.Icebergs {
         public List<Iceberg> icebergs;
         public float spawnZ;
 
-        public PowerUp fullSteamAheadPrefab;
-        public PowerUp armourPlatingPrefab;
-        public PowerUp maneuverabiltyUpPrefab;
+        public CollectiblePowerUp fullSteamAheadPrefab;
+        public CollectiblePowerUp armourPlatingPrefab;
+        public CollectiblePowerUp maneuverabiltyUpPrefab;
 
         private float _cooldown;
         private GameManager _manager;
@@ -22,7 +23,7 @@ namespace LD50.Icebergs {
 
         private void Update() {
             if (_cooldown > 0) {
-                _cooldown -= Time.deltaTime;
+                _cooldown -= Time.deltaTime * _manager.speed;
                 return;
             }
 
@@ -32,7 +33,7 @@ namespace LD50.Icebergs {
                 switch (berg.type) {
                     case IcebergPreset.ElementType.ICEBERG:
                         var rotation = Quaternion.Euler(0, Random.Range(0, 4) * 90, 0);
-                        var iceberg = Instantiate(icebergs[Random.Range(0, icebergs.Count)], position, rotation, this.transform);
+                        Instantiate(icebergs[Random.Range(0, icebergs.Count)], position, rotation, this.transform);
                         break;
                     case IcebergPreset.ElementType.FULL_STEAM_AHEAD:
                         var fullSteamAhead = Instantiate(fullSteamAheadPrefab, position, Quaternion.identity, this.transform);
@@ -48,7 +49,7 @@ namespace LD50.Icebergs {
                         break;
                 }
             }
-            _cooldown = preset.width / _manager.speed;
+            _cooldown = preset.width;
         }
     }
 }
