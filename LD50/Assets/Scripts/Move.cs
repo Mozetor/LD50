@@ -9,12 +9,13 @@ namespace LD50
 
         private Vector3 _startPosition;
         private float _current;
-        private int _dir = 1;
+        private int _dir;
 
         private void Start()
         {
             _startPosition = transform.position;
             _current = Random.Range(0f, 1f);
+            _dir = Random.Range(0, 2) == 0 ? 1 : -1;
         }
 
         private void Update()

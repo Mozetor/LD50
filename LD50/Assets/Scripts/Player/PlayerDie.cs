@@ -1,3 +1,4 @@
+using LD50.Sound;
 using LD50.Utils;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace LD50.Player
             var g = FindObjectOfType<GameManager>();
             g.isAlive = false;
             g.AddRoundToGlobalStats();
+            FindObjectOfType<SfxSoundPlayer>().PlaySfx(SfxSoundPlayer.FailSound);
             FindObjectOfType<SceneController>().ChangeScene("GameOver");
         }
     }

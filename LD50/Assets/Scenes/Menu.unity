@@ -596,7 +596,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.8
+  m_fontSize: 35.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.8
+  m_fontSize: 35.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1374786637}
+      - m_Target: {fileID: 1896112782}
         m_TargetAssemblyTypeName: LD50.Utils.SceneController, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -2416,6 +2416,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2109434463}
+        m_TargetAssemblyTypeName: LD50.Sound.SfxSoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2458,74 +2470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367191554}
   m_CullTransparentMesh: 1
---- !u!1001 &1374786636
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2508539429886328836, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_Name
-      value: SceneTransition
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508539429886328842, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
---- !u!114 &1374786637 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2508539429886328837, guid: 7e9ce029cb95a55409dd740ded50c8f9, type: 3}
-  m_PrefabInstance: {fileID: 1374786636}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf3a921e156c5943b6acf2249f0fad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1375682153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,7 +2688,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1374786637}
+      - m_Target: {fileID: 1896112782}
         m_TargetAssemblyTypeName: LD50.Utils.SceneController, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -2754,6 +2698,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2109434463}
+        m_TargetAssemblyTypeName: LD50.Sound.SfxSoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1498247791
@@ -3112,7 +3068,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.8
+  m_fontSize: 35.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3323,7 +3279,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.2
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3533,7 +3489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1374786637}
+      - m_Target: {fileID: 1896112782}
         m_TargetAssemblyTypeName: LD50.Utils.SceneController, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -3543,6 +3499,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Options
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2109434463}
+        m_TargetAssemblyTypeName: LD50.Sound.SfxSoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1890968409
@@ -3583,6 +3551,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890968406}
   m_CullTransparentMesh: 1
+--- !u!114 &1896112782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7015273292713515545, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+  m_PrefabInstance: {fileID: 2109434462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf3a921e156c5943b6acf2249f0fad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1919937759
 Mesh:
   m_ObjectHideFlags: 0
@@ -3938,7 +3917,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.45
+  m_fontSize: 30
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4073,7 +4052,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.5
+  m_fontSize: 30
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4123,6 +4102,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081111700}
   m_CullTransparentMesh: 1
+--- !u!1001 &2109434462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781255564066165202, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887788879353457406, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+      propertyPath: m_Name
+      value: GlobalPrefabs
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+--- !u!114 &2109434463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2186067150075881689, guid: ba8e2635bd70e5d4eab0072aa7b8b0c5, type: 3}
+  m_PrefabInstance: {fileID: 2109434462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a47b161c2519f74bb41afe009a3658e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &543450652739314346
 Transform:
   m_ObjectHideFlags: 0
@@ -4829,9 +4876,8 @@ MonoBehaviour:
   textColor: {r: 0, g: 0, b: 0, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   show: 1
-  text: '<b>Maneuverability Up!</b>
-
-    Increased sidewards movement speed.'
+  text: "<b>Maneuverability Up!</b>\nIncreased sidewards movement               \nspeed
+    for <color=blue>15s</color>."
 --- !u!33 &3469287837111871223
 MeshFilter:
   m_ObjectHideFlags: 0
