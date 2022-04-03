@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings
+namespace LD50.Settings
 {
     /// <summary>
     /// Manages the option asset.

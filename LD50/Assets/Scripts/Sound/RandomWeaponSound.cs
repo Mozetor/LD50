@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Sound {
+namespace LD50.Sound {
 
     public class RandomWeaponSound : MonoBehaviour {
         public List<AudioClipList> creatingClips = new List<AudioClipList>();

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sound {
+namespace LD50.Sound {
 
     public static class AudioUtils {
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings
+namespace LD50.Settings
 {
     /// <summary>
     /// The Settings of the game.

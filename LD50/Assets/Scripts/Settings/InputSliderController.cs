@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Settings
+namespace LD50.Settings
 {
     /// <summary>
     /// Manages the sync. of the value of a Slider and Input field
