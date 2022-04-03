@@ -23,7 +23,7 @@ namespace LD50.PowerUp {
             };
             powerUp.TriggerPowerUp();
             FindObjectOfType<SfxSoundPlayer>().PlaySfx(SfxSoundPlayer.PickupSound);
-            FindObjectOfType<GameManager>().globalStats.powerUpsCollected++;
+            FindObjectOfType<GameManager>().roundStats.powerUpsCollected++;
             activePowerUps[powerUp]++;
         }
 
