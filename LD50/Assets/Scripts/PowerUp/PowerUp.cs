@@ -22,9 +22,6 @@ namespace LD50.PowerUp {
             public void TriggerPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
                 obj.StartCoroutine(ExecutePowerUp(obj).GetEnumerator());
-                var controller = GameObject.Find("FullSteamAhead").GetComponent<Animator>();
-                controller.transform.GetChild(0).gameObject.SetActive(true);
-                controller.SetTrigger("Trigger");
             }
 
             public void CleanUpPowerUp() { 
@@ -32,6 +29,9 @@ namespace LD50.PowerUp {
             }
 
             private IEnumerable ExecutePowerUp(PowerUpManager powerUpManager) {
+                var controller = GameObject.Find("FullSteamAhead").GetComponent<Animator>();
+                controller.transform.GetChild(0).gameObject.SetActive(true);
+                controller.SetTrigger("Trigger");
                 var playerDie = GameObject.FindObjectOfType<PlayerDie>();
                 var playerDestroy = GameObject.FindObjectOfType<PlayerDestroyIceberg>();
                 var manager = GameObject.FindObjectOfType<GameManager>();
@@ -49,7 +49,6 @@ namespace LD50.PowerUp {
                     playerDie.enabled = true;
                     playerDestroy.enabled = false;
                     manager.SetSpeed(manager.speed / SPEED_FACTOR);
-                    var controller = GameObject.Find("FullSteamAhead").GetComponent<Animator>();
                     controller.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
@@ -71,6 +70,9 @@ namespace LD50.PowerUp {
 
             private IEnumerable ExecutePowerUp(PowerUpManager powerUpManager) {
                 var player = GameObject.FindObjectOfType<PlayerController>();
+                var controller = GameObject.Find("Maneuverability").GetComponent<Animator>();
+                controller.transform.GetChild(0).gameObject.SetActive(true);
+                controller.SetTrigger("Trigger");
 
                 if (powerUpManager.activePowerUps[this] == 0) {
                     player.maneuverability *= MANEUVERABILITY_FACTOR;
@@ -81,6 +83,7 @@ namespace LD50.PowerUp {
                 powerUpManager.RemovePowerUp(IcebergPreset.ElementType.MANEUVERABILITY);
                 if (powerUpManager.activePowerUps[this] == 0) {
                     player.maneuverability /= MANEUVERABILITY_FACTOR;
+                    controller.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
         }
