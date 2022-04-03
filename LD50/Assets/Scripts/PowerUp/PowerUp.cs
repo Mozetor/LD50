@@ -101,13 +101,13 @@ namespace LD50.PowerUp {
             }
             public void CleanUpPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
+                var amount = GameObject.Find("Amount").GetComponent<TMPro.TextMeshProUGUI>();
+                amount.text = $"{obj.activePowerUps[this] + 1}";
                 if (obj.activePowerUps[this] == 1) {
                     var plating = GameObject.Find("Plating").GetComponent<MeshRenderer>();
                     plating.enabled = false;
                     GameObject.Find("ArmourPlating").SetActive(false);
                 }
-                var amount = GameObject.Find("Amount").GetComponent<TMPro.TextMeshProUGUI>();
-                amount.text = $"{obj.activePowerUps[this] + 1}";
             }
 
         }
