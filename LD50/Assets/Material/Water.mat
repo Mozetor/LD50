@@ -147,6 +147,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NoiseScale: 2
+    - _NoiseScrollFactor: -1.1
     - _NoiseScrollSpeed: 1.1
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
