@@ -10,10 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afa23dbdd21f7824a9f34c04bb3d328e, type: 3}
-  m_Name: New Iceberg Preset
+  m_Name: ArmorPlateCluster1
   m_EditorClassIdentifier: 
   positions:
   - lane: 1
-    offset: 0
+    offset: 0.166
+    type: 0
+  - lane: 1
+    offset: 0.333
+    type: 0
+  - lane: 1
+    offset: 0.5
+    type: 0
+  - lane: 1
+    offset: 0.666
+    type: 0
+  - lane: 0
+    offset: 0.666
     type: 2
-  width: 10
+  - lane: 0
+    offset: 0.833
+    type: 0
+  - lane: 1
+    offset: 0.833
+    type: 0
+  width: 40

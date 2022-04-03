@@ -53,7 +53,7 @@ namespace LD50.PowerUp {
         private class ManeuverabilityUp : IPowerUp {
 
             private const int MANEUVERABILITY_FACTOR = 2;
-            private const float DURATION = 5;
+            private const float DURATION = 15;
 
             public void TriggerPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
