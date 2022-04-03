@@ -41,7 +41,7 @@ MonoBehaviour:
     offset: 0.5625
     type: 0
   - lane: 1
-    offset: 0.625
+    offset: 0.615
     type: 0
   - lane: 2
     offset: 0.625
