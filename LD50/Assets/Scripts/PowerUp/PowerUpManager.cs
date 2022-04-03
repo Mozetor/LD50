@@ -31,6 +31,7 @@ namespace LD50.PowerUp {
                 IcebergPreset.ElementType.MANEUVERABILITY => IPowerUp.maneuverabilityUp,
                 _ => throw new ArgumentException($"Unknown power up type {type}")
             };
+            powerUp.CleanUpPowerUp();
             activePowerUps[powerUp]--;
         }
     }

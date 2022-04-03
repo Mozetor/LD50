@@ -15,10 +15,14 @@ MonoBehaviour:
   positions:
   - lane: 2
     offset: 0.166
+    type: 0
   - lane: 1
     offset: 0.333
+    type: 0
   - lane: 1
     offset: 0.666
+    type: 0
   - lane: 1
-    offset: 0.833
+    offset: 0.8
+    type: 0
   width: 40
