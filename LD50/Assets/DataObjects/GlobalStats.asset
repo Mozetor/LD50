@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8324b02a7bff8ca44b611a4956ce1f78, type: 3}
   m_Name: GlobalStats
   m_EditorClassIdentifier: 
-  timeSurvivedHighScore: 223.11017
-  timeSurvived: 701.45044
-  powerUpsCollected: 28
-  icebergsDodged: 697
-  roundsPlayed: 10
+  timeSurvivedHighScore: 0
+  timeSurvived: 0
+  powerUpsCollected: 0
+  icebergsDodged: 0
+  roundsPlayed: 0
