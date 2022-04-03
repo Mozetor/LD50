@@ -11,10 +11,12 @@ namespace LD50 {
         public float time;
         public float timeFactor;
 
-        private List<float> maxIntensities;
+        private List<float> _maxIntensities;
+        private float _maxSunIntensity;
 
         private void Start() {
-            maxIntensities = nightLights.Select(l => l.intensity).ToList();
+            _maxIntensities = nightLights.Select(l => l.intensity).ToList();
+            _maxSunIntensity = sun.intensity;
         }
 
         private void Update() {
@@ -23,12 +25,15 @@ namespace LD50 {
 
             dayNightIndicator.rectTransform.rotation = Quaternion.Euler(0, 0, time * 180);
 
-            sun.intensity = time > 1 ? 0 : Mathf.Sin(time * Mathf.PI);
+            sun.intensity = time > 1 ? 0 : Mathf.Sin(time * Mathf.PI) * _maxSunIntensity;
             sun.transform.rotation = Quaternion.Euler(time * 180, -30, 0);
+            // Debug.Log($"sun:{sun.gameObject.name}={sun.intensity* _maxSunIntensity} (max:{_maxSunIntensity})");
 
             var intensityFactor = Mathf.Pow(-1f / 2 * Mathf.Sin(time * Mathf.PI) + 1f / 2, 2);
-            foreach (var (light, maxIntensity) in nightLights.Zip(maxIntensities, (a, b) => (a, b))) {
+            foreach (var (light, maxIntensity) in nightLights.Zip(_maxIntensities, (a, b) => (a, b)))
+            {
                 light.intensity = maxIntensity * intensityFactor;
+                // Debug.Log($"light:{light.gameObject.name}={maxIntensity*intensityFactor} (max:{maxIntensity})");
             }
         }
 

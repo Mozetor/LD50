@@ -16,4 +16,4 @@ MonoBehaviour:
   - lane: 1
     offset: 0
     type: 1
-  width: 0
+  width: 10
