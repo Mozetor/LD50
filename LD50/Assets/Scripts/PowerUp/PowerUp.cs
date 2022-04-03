@@ -12,6 +12,7 @@ namespace LD50.PowerUp {
         static readonly IPowerUp armourPlating = new ArmourPlating();
 
         void TriggerPowerUp();
+        void CleanUpPowerUp();
 
         private class FullSteamAhead : IPowerUp {
 
@@ -21,6 +22,10 @@ namespace LD50.PowerUp {
             public void TriggerPowerUp() {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
                 obj.StartCoroutine(ExecutePowerUp(obj).GetEnumerator());
+            }
+
+            public void CleanUpPowerUp() { 
+                // nothing to do here
             }
 
             private IEnumerable ExecutePowerUp(PowerUpManager powerUpManager) {
@@ -54,6 +59,10 @@ namespace LD50.PowerUp {
                 var obj = GameObject.FindObjectOfType<PowerUpManager>();
                 obj.StartCoroutine(ExecutePowerUp(obj).GetEnumerator());
             }
+            public void CleanUpPowerUp() {
+                // nothing to do here
+            }
+
 
             private IEnumerable ExecutePowerUp(PowerUpManager powerUpManager) {
                 var player = GameObject.FindObjectOfType<PlayerController>();
@@ -73,8 +82,19 @@ namespace LD50.PowerUp {
 
         private class ArmourPlating : IPowerUp {
             public void TriggerPowerUp() {
-                throw new NotImplementedException();
+                var playerDie = GameObject.FindObjectOfType<PlayerDie>();
+                playerDie.lives++;
+                var plating = GameObject.Find("Plating").GetComponent<MeshRenderer>();
+                plating.enabled = true;
             }
+            public void CleanUpPowerUp() {
+                var obj = GameObject.FindObjectOfType<PowerUpManager>();
+                if (obj.activePowerUps[this] == 1) {
+                    var plating = GameObject.Find("Plating").GetComponent<MeshRenderer>();
+                    plating.enabled = false;
+                }
+            }
+
         }
     }
 }
