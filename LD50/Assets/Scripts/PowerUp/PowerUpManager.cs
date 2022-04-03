@@ -1,6 +1,7 @@
 using LD50.Icebergs;
 using System;
 using System.Collections.Generic;
+using LD50.Sound;
 using UnityEngine;
 
 namespace LD50.PowerUp {
@@ -21,6 +22,7 @@ namespace LD50.PowerUp {
                 _ => throw new ArgumentException($"Unknown power up type {type}")
             };
             powerUp.TriggerPowerUp();
+            FindObjectOfType<SfxSoundPlayer>().PlaySfx(SfxSoundPlayer.PickupSound);
             activePowerUps[powerUp]++;
         }
 

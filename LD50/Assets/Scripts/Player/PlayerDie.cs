@@ -1,5 +1,6 @@
 using LD50.Icebergs;
 using LD50.PowerUp;
+using LD50.Sound;
 using LD50.Utils;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace LD50.Player {
             if (!this.enabled || !collision.transform.CompareTag("Iceberg")) return;
 
             lives--;
+            FindObjectOfType<SfxSoundPlayer>().PlaySfx(SfxSoundPlayer.FailSound);
             if (lives == 0) {
                 var g = FindObjectOfType<GameManager>();
                 g.isAlive = false;
