@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positions:
   - lane: 1
-    offset: 0.166
+    offset: 0.22
     type: 0
   - lane: 1
     offset: 0.333
