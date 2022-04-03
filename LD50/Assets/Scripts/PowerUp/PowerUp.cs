@@ -106,6 +106,8 @@ namespace LD50.PowerUp {
                     plating.enabled = false;
                     GameObject.Find("ArmourPlating").SetActive(false);
                 }
+                var amount = GameObject.Find("Amount").GetComponent<TMPro.TextMeshProUGUI>();
+                amount.text = $"{obj.activePowerUps[this] + 1}";
             }
 
         }

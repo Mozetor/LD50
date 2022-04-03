@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 76.72122, g: 95.07214, b: 125.83208, a: 1}
+  m_IndirectSpecularColor: {r: 76.853455, g: 95.22522, b: 126.03125, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2756,7 +2756,7 @@ Animator:
   m_GameObject: {fileID: 1872597322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e00545f17bac4248b5ffc1b8dd8c566, type: 2}
+  m_Controller: {fileID: 9100000, guid: 794f381dfd97ba24e971817a2bebd71c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 26.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
