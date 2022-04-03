@@ -26,8 +26,7 @@ namespace LD50 {
             sun.intensity = time > 1 ? 0 : Mathf.Sin(time * Mathf.PI);
             sun.transform.rotation = Quaternion.Euler(time * 180, -30, 0);
 
-            var intensityFactor = Mathf.SmoothStep(0, 1, Mathf.Sin((time - 1) / 2 * Mathf.PI));
-
+            var intensityFactor = Mathf.Pow(-1f / 2 * Mathf.Sin(time * Mathf.PI) + 1f / 2, 2);
             foreach (var (light, maxIntensity) in nightLights.Zip(maxIntensities, (a, b) => (a, b))) {
                 light.intensity = maxIntensity * intensityFactor;
             }
