@@ -961,7 +961,7 @@ MonoBehaviour:
   spawnZ: 25
   fullSteamAheadPrefab: {fileID: 1596844480475731084, guid: a77304201a80aa84a819513cc25fb6b4, type: 3}
   armourPlatingPrefab: {fileID: 7278854229233380803, guid: d13e6d7f9ab1e0c4397eeef01347d865, type: 3}
-  maneuverabiltyUpPrefab: {fileID: 8176280684379469355, guid: fef11923f45bbca4ea686b27574001aa, type: 3}
+  maneuverabiltyUpPrefab: {fileID: 8434445581848913418, guid: 038f09216b6c01843a309d480ffa8b06, type: 3}
 --- !u!4 &1155655318
 Transform:
   m_ObjectHideFlags: 0

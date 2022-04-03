@@ -46,8 +46,28 @@ namespace LD50.PowerUp {
         }
 
         private class ManeuverabilityUp : IPowerUp {
+
+            private const int MANEUVERABILITY_FACTOR = 2;
+            private const float DURATION = 5;
+
             public void TriggerPowerUp() {
-                throw new NotImplementedException();
+                var obj = GameObject.FindObjectOfType<PowerUpManager>();
+                obj.StartCoroutine(ExecutePowerUp(obj).GetEnumerator());
+            }
+
+            private IEnumerable ExecutePowerUp(PowerUpManager powerUpManager) {
+                var player = GameObject.FindObjectOfType<PlayerController>();
+
+                if (powerUpManager.activePowerUps[this] == 0) {
+                    player.maneuverability *= MANEUVERABILITY_FACTOR;
+                }
+
+                yield return new WaitForSeconds(DURATION);
+
+                powerUpManager.RemovePowerUp(IcebergPreset.ElementType.MANEUVERABILITY);
+                if (powerUpManager.activePowerUps[this] == 0) {
+                    player.maneuverability /= MANEUVERABILITY_FACTOR;
+                }
             }
         }
 
