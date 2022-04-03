@@ -4,6 +4,8 @@ namespace LD50
 {
     public class GameManager : MonoBehaviour
     {
+        public DifficultyData difficultyData;
+        public float difficultyIncrease;
         public float speed = 3;
         public int laneCount = 3;
         public int xDistanceBetweenLane = 5;
@@ -28,8 +30,12 @@ namespace LD50
 
         private void Update()
         {
-            if(isAlive)
-                roundStats.timeSurvived += Time.deltaTime;
+            if(!isAlive) return;
+            roundStats.timeSurvived += Time.deltaTime;
+            var v = speed * Time.deltaTime * difficultyData.difficulty;
+            difficultyIncrease += v;
+            speed += v;
+            waterMaterial.SetFloat(ZScrollSpeed, -speed / 2);
         }
 
         internal void IcebergDodged() {

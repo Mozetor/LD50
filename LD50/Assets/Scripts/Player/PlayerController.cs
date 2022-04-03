@@ -49,9 +49,9 @@ namespace LD50.Player {
 
             _rigidbody.MovePosition(
                 Vector3.Lerp(
-                    this.transform.position,
-                    new Vector3(_gameManager.GetLaneXPosition(_lane),transform.position.y, transform.position.z),
-                    Time.fixedDeltaTime * maneuverability * distanceToEase
+                    new Vector3(transform.position.x,0, -8),
+                    new Vector3(_gameManager.GetLaneXPosition(_lane),0, -8),
+                    Time.fixedDeltaTime * (maneuverability + _gameManager.difficultyIncrease) * distanceToEase
                 )
            );
         }
